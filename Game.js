@@ -1,7 +1,7 @@
-import { Board } from './Board.js';
-import { Timer } from './Timer.js';
-import { Score } from './Score.js';
-import { Life } from './Life.js';
+import { Board } from './app/Board.js';
+import { Timer } from './app/Timer.js';
+import { Score } from './app/Score.js';
+import { Life } from './app/Life.js';
 
 
 
@@ -45,9 +45,9 @@ export class Game {
                         boardGame.stopDrawElement();
                         buttonStart.disabled = true;
                         lifeGame.resetLife();
-                        scoreGame.resetScore();
                         timerGame.resetTimer();
                         alert(`Twój wynik ${scoreGame.score}`)
+                        scoreGame.resetScore();
 
 
                     }
