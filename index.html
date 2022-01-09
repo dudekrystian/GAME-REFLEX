@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reflex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <div id="panel" class="panel">
+            <div id="player_live" class="player_live">LIVE: <span id="player_live__span"></span></div>
+
+            <div id="player_score" class="player_score">SCORE:<span id="player_score__span"></span></div>
+
+            <div class="player_game-name">
+                <h2 class="panel__player-name__name">
+                    REFLEX
+                </h2>
+            </div>
+            <div id="player_timer" class="player_timer">
+                <p>TIME: <span class="player_timer__span"></span> s</p>
+            </div>
+        </div>
+        <div id="board" class="board">
+        </div>
+        <div id="game__buttons" class="buttons">
+            <button class="button_start" id="button_start">Start</button>
+            <button class="button_reset" id="button_reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="./app/Game.js" type="module"></script>
+
+
+
+</body>
+
+</html>

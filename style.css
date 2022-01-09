@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bgColor: rgb(255, 255, 255);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 5px;
+    /* justify-content: center;
+    align-items: center;
+    position: absolute; */
+
+}
+
+
+
+.panel {
+    width: 75%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3369ff;
+    color: white;
+
+
+
+}
+
+
+
+.board {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+
+
+
+}
+
+
+
+.player {
+    border: black 1px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.buttonElement {
+    width: 50px;
+    height: 50px;
+    background-color: chocolate;
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.buttonElement:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+
+.button_start,
+.button_reset {
+    padding: 0.7em 1.7em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #3369ff;
+
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.button_reset:hover,
+.button_start:hover {
+    background-color: #838eaf;
+}
+
+.button_start:disabled,
+.button_reset:disabled {
+    background-color: #838eaf;
+    cursor: no-drop;
+}
+
+.board:disabled {
+    background-color: red;
+    cursor: no-drop;
+}
+
+
+
+.game__board_field {
+    width: 50px;
+    height: 50px;
+
+    background-color: #003de6;
+
+    cursor: pointer;
+    /* margin: auto; */
+    flex-grow: 1;
+    margin: 3px;
+
+}
+
+.drawn {
+    background-color: yellowgreen;
+}
+
+
+.game__board_field:hover {
+    background-color: yellow;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 600px) {
+
+
+    .app {
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+
+
+
+    }
+
+    .panel {
+        width: 90vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        padding: 10px;
+        margin-top: 5px;
+
+    }
+
+    .board {
+        display: flex;
+        width: 90vw;
+        height: 70vh;
+        margin: 20px;
+    }
+
+    .buttons {
+        height: 10vh;
+        width: 90vw;
+
+
+    }
+
+    .button_start,
+    .button_reset {
+        flex-basis: 45%;
+    }
+
+    .game__board_field {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        /* margin: auto; */
+        /* flex-grow: 1; */
+        margin: 2px;
+
+    }
+
+
+
+
+
+}
+
+/* tablet */
+
+@media only screen and (min-width:601px) and (max-width:800px) {
+
+
+    .panel {
+        margin-top: 15px;
+
+    }
+
+    .button_start,
+    .button_reset {
+        flex-basis: 40%;
+        height: 50px;
+    }
+
+    .board {
+        display: flex;
+        width: 70vw;
+        height: 75vh;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    .game__board_field {
+        width: 55px;
+        height: 55px;
+
+        cursor: pointer;
+
+    }
+
+}
+
+@media only screen and (min-width:801px) {
+    .app {
+        width: 90%;
+    }
+
+    .board {
+        display: flex;
+        width: 60vw;
+        /* height: 70vh; */
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    .game__board_field {
+        width: 60px;
+        height: 60px;
+
+        cursor: pointer;
+
+    }
+
+    .button_start,
+    .button_reset {
+        flex-basis: 20%;
+        height: 50px;
+    }
+
+}
