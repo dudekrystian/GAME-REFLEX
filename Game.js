@@ -84,8 +84,9 @@ export class Game {
         this.timerGame.resetTimer();
         this.lifeGame.resetLife();
         this.scoreGame.resetScore();
-        this.boardGame.showDrawElement();
         this.timerGame.startTimer();
+        this.boardGame.showDrawElement(this.boardGame.stopDrawElement());
+
     }
 }
 
